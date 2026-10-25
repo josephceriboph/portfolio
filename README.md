@@ -1,22 +1,18 @@
-# Joseph Ceribo — SEO Portfolio
+# Joseph Ceribo — SEO Portfolio (Light Editorial Theme)
 
-A responsive, static portfolio website designed for GitHub Pages.
+A responsive GitHub Pages portfolio with a clean light theme, warm white backgrounds, ink-navy typography, cobalt-blue accents, and a subtle orange highlight.
 
 ## Files
 - `index.html` — site content, SEO metadata, and Person structured data
-- `styles.css` — responsive visual design
+- `styles.css` — responsive light-theme design
 - `script.js` — mobile navigation and current year
 - `robots.txt` and `sitemap.xml` — starter crawl files
 
-## Publish to your existing `portfolio` repository
+## Update your existing `portfolio` repository
 1. Download and unzip this project.
-2. Upload the files inside this folder to the **root** of your GitHub repository named `portfolio`.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose branch `main` and folder `/ (root)`, then save.
-6. Wait for GitHub Pages to publish the site.
-
-Your typical URL will be `https://YOUR-USERNAME.github.io/portfolio/`.
+2. Upload the files inside the folder to the **root** of your existing GitHub repository named `portfolio`, replacing the old versions.
+3. Commit the changes. GitHub Pages should redeploy automatically; you usually do not need to change Pages settings if the site is already working.
+4. Refresh the published site. If the old design remains, hard-refresh with `Ctrl + F5`.
 
 ## Before publishing — important replacements
 Search the files for `YOUR-USERNAME`, `YOUR-EMAIL@example.com`, and `YOUR-LINKEDIN` and replace them with your real details. Update the canonical URL, sitemap URL, and robots.txt sitemap URL to the exact published URL. If you connect a custom domain, update these URLs to that domain.

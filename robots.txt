@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Replace with your published sitemap URL after deploying.
-Sitemap: https://josephceriboph.github.io/portfolio/sitemap.xml
+Sitemap: https://YOUR-USERNAME.github.io/portfolio/sitemap.xml
