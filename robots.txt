@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace with your published sitemap URL after deploying.
+Sitemap: https://YOUR-USERNAME.github.io/portfolio/sitemap.xml
