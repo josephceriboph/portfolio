@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Internal Link Generator | SEO Tools</title>
+  <meta name="description" content="Internal link recommendation tool for service business pages and local SEO content.">
+  <meta name="robots" content="index,follow">
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --panel-alt: #f1f5f9;
+      --border: #e5e7eb;
+      --text: #111827;
+      --muted: #4b5563;
+      --green: #67d4a3;
+      --green-dark: #1d7a51;
+      --shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+    .container { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
+
+    .header {
+      background: rgba(255,255,255,0.9);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 80px;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #111827;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .page-wrap {
+      padding: 62px 0 80px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 8px rgba(103, 212, 163, 0.12);
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.07;
+      letter-spacing: -0.06em;
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 0 0 28px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      margin-top: 28px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      padding: 1rem;
+      font: inherit;
+      resize: vertical;
+    }
+
+    .rule-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .rule-list li {
+      padding: 0.8rem 1rem;
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .rule-list strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .suggestion-box {
+      margin-top: 18px;
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .suggestion {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 10px;
+    }
+
+    .suggestion strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .phone-box {
+      margin-top: 18px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 0.98rem;
+    }
+
+    .footer {
+      padding: 36px 0 60px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">JC</span>
+        <span>Joseph Ceribo</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="index.html">SEO Tools Hub</a>
+        <a href="metadata-generator.html">Metadata Generator</a>
+        <a href="alt-text-generator.html">Alt Text Generator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <div class="container">
+      <div class="eyebrow"><span class="status-dot"></span> Internal Link Generator</div>
+      <h1>Recommend internal links without rewriting the original content.</h1>
+      <p class="lead">
+        Paste the page content, add your services list, and the tool will recommend the strongest internal link opportunities. It should not change or rewrite the content automatically.
+      </p>
+
+      <div class="layout">
+        <section class="panel">
+          <h2>Page content</h2>
+          <textarea id="content">
+We provide dental implants, family dentistry, emergency care, and teeth whitening for patients in Austin, Texas. Our team helps patients improve comfort, confidence, and oral health with personalized treatment plans.
+          </textarea>
+
+          <div class="suggestion-box">
+            <strong>Recommended internal links</strong>
+            <div id="suggestions"></div>
+          </div>
+
+          <div class="phone-box">
+            <strong>Phone CTA check</strong>
+            <div id="phoneResult">(512) 555-0134 should be converted to a clickable tel link.</div>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <h2>Tool rules</h2>
+          <ul class="rule-list">
+            <li>
+              <strong>Input</strong>
+              Paste page content and list the website services/pages.
+            </li>
+            <li>
+              <strong>Recommendation logic</strong>
+              Match service keywords to existing page titles and URLs.
+            </li>
+            <li>
+              <strong>No rewrite</strong>
+              Suggest links only. Do not alter the original copy unless approved.
+            </li>
+            <li>
+              <strong>Phone number check</strong>
+              If a visible phone number appears in the content or CTA, recommend a tel link.
+            </li>
+            <li>
+              <strong>Safe linking</strong>
+              Avoid generic anchor text such as “click here.”
+            </li>
+          </ul>
+
+          <div class="suggestion-box">
+            <strong>Example recommendations</strong>
+            <div class="suggestion">
+              <strong>Dental implants → /services/dental-implants</strong>
+              Match found in first paragraph. Relevant service page.
+            </div>
+            <div class="suggestion">
+              <strong>Emergency care → /services/emergency-care</strong>
+              Strong match for a core service category.
+            </div>
+            <div class="suggestion">
+              <strong>Call now → tel:+15125550134</strong>
+              Suggested clickable phone CTA for mobile users.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2026 Joseph Ceribo
+  </footer>
+
+  <script>
+    const contentField = document.getElementById('content');
+    const suggestionsDiv = document.getElementById('suggestions');
+    const phoneResult = document.getElementById('phoneResult');
+
+    const services = [
+      { name: 'Dental Implants', url: '/services/dental-implants' },
+      { name: 'Family Dentistry', url: '/services/family-dentistry' },
+      { name: 'Emergency Care', url: '/services/emergency-care' },
+      { name: 'Teeth Whitening', url: '/services/teeth-whitening' }
+    ];
+
+    function generateSuggestions() {
+      const content = contentField.value.toLowerCase();
+      const output = [];
+
+      services.forEach(service => {
+        const name = service.name.toLowerCase();
+        if (content.includes(name.toLowerCase())) {
+          output.push(`
+            <div class="suggestion">
+              <strong>${service.name} → ${service.url}</strong>
+              Relevant service match found in the page content.
+            </div>
+          `);
+        }
+      });
+
+      if (output.length === 0) {
+        suggestionsDiv.innerHTML = `
+          <div class="suggestion">
+            <strong>No strong service matches found.</strong>
+            Add more specific service names or page titles to improve the recommendation list.
+          </div>
+        `;
+      } else {
+        suggestionsDiv.innerHTML = output.join('');
+      }
+
+      if (content.includes('(512) 555-0134') || content.includes('512-555-0134') || content.includes('555-0134')) {
+        phoneResult.innerHTML = 'Phone number detected. Recommended: <a href="tel:+15125550134">(512) 555-0134</a>';
+      } else {
+        phoneResult.textContent = 'No phone number detected in this content. Recommend adding a clickable tel link in the contact CTA.';
+      }
+    }
+
+    contentField.addEventListener('input', generateSuggestions);
+    generateSuggestions();
+  </script>
+</body>
+</html>
