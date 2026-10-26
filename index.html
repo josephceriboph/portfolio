@@ -26,6 +26,18 @@
       </button>
 
       <div class="nav-links" id="nav-links">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="seo-tools-menu">
+            SEO Tools <span aria-hidden="true">▾</span>
+          </button>
+          <div class="nav-dropdown-menu" id="seo-tools-menu">
+            <a href="seo-tools/index.html">SEO Tools Hub</a>
+            <a href="seo-tools/metadata-generator.html">Metadata Generator</a>
+            <a href="seo-tools/internal-link-generator.html">Internal Link Generator</a>
+            <a href="seo-tools/alt-text-generator.html">Alt Text Generator</a>
+          </div>
+        </div>
+
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="work.html">Work</a>
@@ -203,6 +215,58 @@
       </div>
     </section>
 
+    <section class="section section-alt" id="seo-tools">
+      <div class="container">
+        <div class="section-kicker"><span>03</span> / Automation tools</div>
+
+        <div class="section-heading-row">
+          <h2>SEO automation<br><span class="muted-heading">for real workflows.</span></h2>
+          <p>I build practical automation tools to improve metadata consistency, internal linking quality, and image accessibility across service-business websites.</p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="skill-card">
+            <div class="skill-number">01</div>
+            <div class="skill-icon">⌂</div>
+            <h3>Metadata Generator</h3>
+            <p>Generates SEO titles using a consistent structure such as: Page Name | Keyword | City, ST | Business Name.</p>
+            <div class="skill-tags">
+              <span>Title format</span>
+              <span>Meta tags</span>
+              <span>Local SEO</span>
+            </div>
+            <a class="text-link" href="seo-tools/index.html">View tool <span>↗</span></a>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">02</div>
+            <div class="skill-icon">↗</div>
+            <h3>Internal Link Generator</h3>
+            <p>Analyzes content against a service list and recommends internal links without rewriting the content.</p>
+            <div class="skill-tags">
+              <span>Internal linking</span>
+              <span>Service pages</span>
+              <span>Phone CTA</span>
+            </div>
+            <a class="text-link" href="seo-tools/internal-link-generator.html">View tool <span>↗</span></a>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">03</div>
+            <div class="skill-icon">◌</div>
+            <h3>Alt Text Generator</h3>
+            <p>Bulk image review with service-based alt text suggestions, keyword alignment, and accessibility-friendly output.</p>
+            <div class="skill-tags">
+              <span>Accessibility</span>
+              <span>Bulk upload</span>
+              <span>SEO keywords</span>
+            </div>
+            <a class="text-link" href="seo-tools/alt-text-generator.html">View tool <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section container" id="work">
       <div class="section-kicker"><span>03</span> / Selected work</div>
       <div class="section-heading-row">
@@ -214,7 +278,9 @@
         <article class="work-card work-featured">
           <div class="work-visual visual-local">
             <div class="browser-bar">
-              <span></span><span></span><span></span>
+              <div class="browser-dots">
+                <span></span><span></span><span></span>
+              </div>
               <div>Local Search Strategy</div>
             </div>
 
